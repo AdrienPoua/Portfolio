@@ -1,71 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styles from './styles.module.scss';
-import { TbLanguageHiragana } from 'react-icons/tb';
-import { Context } from '../../app';
+import Header from '../../components/Header';
 
-export default function Index({ lang }) {
-  const [language, setLanguage] = useContext(Context);
-  const handleClick = () => setLanguage((prev) => !prev);
+export default function Index() {
   return (
     <section className={styles.landing}>
-      <div className={styles.header}>
-        <button
-          className={styles.btn}
-          onClick={handleClick}
-        >
-          {' '}
-          <TbLanguageHiragana className={styles.svg} />
-          {language ? 'Français' : 'English'}
-        </button>
-        <nav className={styles.nav}>
-          <ul className={styles.ul}>
-            <li className={styles.li}>
-              <a
-                className={styles.a}
-                href=''
-                className={styles.a}
-              >
-                About
-              </a>
-            </li>
-            <li className={styles.li}>
-              <a
-                href=''
-                className={styles.a}
-              >
-                {' '}
-                Compétences
-              </a>
-            </li>
-            <li className={styles.li}>
-              <a
-                href=''
-                className={styles.a}
-              >
-                Mes projets
-              </a>
-            </li>
-            <li className={styles.li}>
-              <a
-                href=''
-                className={styles.a}
-              >
-                {' '}
-                Having fun
-              </a>
-            </li>
-            <li className={styles.li}>
-              <a
-                href=''
-                className={styles.a}
-              >
-                {' '}
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <Header />
       <div className={styles.container}>
         <div className={styles.col}>
           <h1 className={styles.h1}>
@@ -98,6 +38,8 @@ export default function Index({ lang }) {
           <button className={styles.arrow}></button>
         </div>
       </div>
+
+
     </section>
   );
 }

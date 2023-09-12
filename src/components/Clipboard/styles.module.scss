@@ -1,0 +1,35 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.clipboard {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  margin-top: 1.5em;
+  padding-inline: 1em;
+  border : none;
+  width: 100%;
+  opacity: 0.8;
+  color: grey;
+  &:hover {
+    background-color: lightblue;
+  }
+  &__email {
+    white-space: nowrap;
+  }
+  &__email--active {
+    color: yellow;
+  }
+  &__icone {
+    height: 1em;
+    width: 1em;
+    margin-block: auto;
+  }
+  &__icone--checked {
+    color: yellow;
+  }
+}
+.hidden {
+  display: none;
+}
+

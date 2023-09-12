@@ -1,2 +1,21 @@
-@import "../../assets/styles/mixins";
-@import "../../assets/styles/variables";
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+footer {
+  background-color: black;
+  color: white;
+}
+.container {
+  margin: auto;
+  width: 500px;
+}
+.h2 {
+  display: inline-block;
+  border-top: white solid 4px;
+}
+.message {
+  @include fonts(primary, 1.5rem, 600, primary-text);
+  margin-top : 0.5em;
+}
+
+

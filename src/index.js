@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom"; // Correction ici
+import ReactDOM from "react-dom";
 import "./assets/styles/resets.scss";
 import App from './app';
 

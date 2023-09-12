@@ -1,0 +1,27 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.btn {
+  @include flex-center;
+  background-color: transparent;
+  width: fit-content;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: 100ms ease-in-out;
+  &--form {
+    background-color: map-get($colors, secondary-bg);
+    @include fonts(primary, 1em, 600, secondary-text);
+    margin: 1.5em auto;
+  }
+  &--disabled {
+    background-color: map-get($colors, disabled-bg);
+    @include fonts(primary, 1em, 600, disabled-text);
+    margin: 1.5em auto; 
+  }
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}

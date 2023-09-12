@@ -1,12 +1,13 @@
 // Couleurs
 $colors: (
-  primary: #007bff,
-  secondary: #6c757d,
-  success: #28a745,
-  error: #dc3545,
-  warning: #ffc107,
-  black: black,
-  white: white,
+  primary-bg: black,
+  secondary-bg: white,
+  primary-text: white,
+  secondary-text: black,
+  disabled-bg: #ccc,
+  disabled-text: #666,
+  black: 'black',
+  white: 'white',
 );
 
 // Typographies

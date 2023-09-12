@@ -5,32 +5,6 @@
   min-height: 100vh;
   @include flex-column;
   justify-content: space-between;
-  .header {
-    display: flex;
-    justify-content: space-between;
-  }
-  .btn {
-    @include flex-center;
-    gap: 1em;
-    margin-left: 1em;
-    margin-top: 0.5em;
-    padding: 0.2em 1.618em;
-    border-radius: 2em;
-    .svg {
-    }
-  }
-  .nav {
-    display: flex;
-  }
-  .ul {
-    display: flex;
-  }
-  .li {
-    padding: 10px 20px;
-  }
-  .a {
-    color: black;
-  }
   .container {
     display: flex;
     margin-inline: 2em;
@@ -42,7 +16,6 @@
   .h1 {
     @include fonts(secondary, 6rem, 900, black);
     line-height: 5rem;
-
   }
   .h2 {
     @include fonts(secondary, 2rem, 600);
@@ -62,16 +35,24 @@
     align-self: center;
     margin-bottom: 1em;
   }
+  .a {
+    color : black;
+  }
   .arrow__wrapper {
     margin: auto;
   }
   .arrow {
-    padding : 10px;
+    padding: 10px;
     margin-left: auto;
     background-color: transparent;
-    border : none;
-    border-right : black solid 2px;
-    border-bottom : black solid 2px;
+    border: none;
+    border-right: black solid 2px;
+    border-bottom: black solid 2px;
     transform: rotate(45deg);
   }
+}
+.test {
+  height : 1000px;
+  width : 1000px;
+  scroll-snap-type: none;
 }

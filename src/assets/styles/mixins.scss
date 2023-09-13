@@ -136,3 +136,8 @@
     transform: translateX(-50%);
   }
 }
+
+@mixin h2(){
+    display: inline-block;
+    border-top: white solid 4px;
+}

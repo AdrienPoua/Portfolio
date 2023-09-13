@@ -1,17 +1,17 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
-footer {
+.footer {
   background-color: black;
   color: white;
+  padding : 2rem;
 }
 .container {
   margin: auto;
   width: 500px;
 }
-.h2 {
-  display: inline-block;
-  border-top: white solid 4px;
+.title {
+  @include h2
 }
 .message {
   @include fonts(primary, 1.5rem, 600, primary-text);

@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import Form from '../form';
-import Clipboard from '../Clipboard';
+import Form from '../../components/Form';
+import Clipboard from '../../components/Clipboard';
+
 export default function Index() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <div className={styles.container}>
-        <h2 className={styles.h2}>Me contacter</h2>
+        <h2 className={styles.title}>Me contacter</h2>
         <Clipboard />
         <p className={styles.message}>
           Ou, si vous préférez un formulaire

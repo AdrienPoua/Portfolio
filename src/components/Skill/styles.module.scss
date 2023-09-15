@@ -1,0 +1,85 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+$Animation-timing: 30s;
+@keyframes rotateCircle {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.circle {
+  @include flex-center;
+  position: relative;
+  aspect-ratio: 1;
+
+  &::before {
+    @include pseudo($pos: absolute);
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: dashed 2px black;
+    animation: rotateCircle $Animation-timing linear
+      infinite;
+  }
+}
+.dot {
+  border-radius: 50%;
+  padding: 10px;
+  background-color: black;
+}
+.container:nth-child(2){
+  align-self: center;
+}
+
+.item {
+  @include flex-column;
+  position: absolute;
+  z-index: 2;
+  transform-origin: center;
+
+  .item__title {
+    @include flex-center;
+    flex: 1;
+  }
+  .item__circle {
+    @include flex-center;
+    margin: auto;
+    aspect-ratio: 1;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  .item__image {
+    object-fit: contain;
+  }
+}
+
+.left {
+  left: 0;
+  top: 25%;
+  transform: translate(-50%, -50%);
+}
+.right {
+  right: 0;
+  top: 25%;
+  transform: translate(50%, -50%);
+}
+.bottom {
+  bottom: 0;
+  transform: translate(0%, 75%);
+}
+.bottom > *:first-child {
+  order: 1;
+}
+
+.item:first-child {
+  transform-origin: center;
+}

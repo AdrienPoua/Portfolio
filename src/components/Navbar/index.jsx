@@ -7,16 +7,16 @@ export default function index() {
       <ul className={styles.ul}>
         <li className={styles.li}>
           <a
-            className={styles.a}
-            href='#test'
+            className={styles.link}
+            href='#about'
           >
             About
           </a>
         </li>
         <li className={styles.li}>
           <a
-            href='#test'
-            className={styles.a}
+            href='#skills'
+            className={styles.link}
           >
             {' '}
             Compétences
@@ -24,16 +24,16 @@ export default function index() {
         </li>
         <li className={styles.li}>
           <a
-            href='#test'
-            className={styles.a}
+            href='projects'
+            className={styles.link}
           >
             Mes projets
           </a>
         </li>
         <li className={styles.li}>
           <a
-            href='#test'
-            className={styles.a}
+            href='#fun'
+            className={styles.link}
           >
             {' '}
             Having fun
@@ -41,8 +41,8 @@ export default function index() {
         </li>
         <li className={styles.li}>
           <a
-            href='#test'
-            className={styles.a}
+            href='#contact'
+            className={styles.link}
           >
             {' '}
             Contact

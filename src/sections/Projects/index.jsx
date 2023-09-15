@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import Project from '../../components/Project';
+import Subtitle from '../../components/Subtitle';
 
 export default function Index() {
   return (
     <section className={styles.projects}>
-      <h2 className={styles.title}> Projets personnels </h2>
+
+      <Subtitle content={"Mes projets personnels"}/>
       <Project
         image='https://images.unsplash.com/photo-1604964432806-254d07c11f32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80'
         title='test'

@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './styles.module.scss';
 import Form from '../../components/Form';
 import Clipboard from '../../components/Clipboard';
-import Fun from '../../components/Challenge';
 import Subtitlte from '../../components/Subtitle';
 import { Row, Col } from 'react-bootstrap';
 

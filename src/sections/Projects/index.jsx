@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import Project from '../../components/Project';
 import Subtitle from '../../components/Subtitle';
-import MyProgress from '../../components/MyProgress';
+
 export default function Index() {
   return (
     <section className={styles.projects}>

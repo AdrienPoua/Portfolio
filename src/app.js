@@ -1,11 +1,11 @@
 import { useState, useContext, createContext } from 'react';
 import React from 'react';
-import Landing from './sections/landing';
-import About from './sections/about'
+import Landing from './sections/Landing';
+import About from './sections/About'
 import Footer from './sections/Footer';
 import Projects from './sections/Projects';
 import Fun from './sections/Fun';
-import Skills from './sections/skills/Index';
+import Skills from './sections/Skills';
 export const Context = createContext();
 export default function App() {
   const [language, setLanguage] = useState(true);

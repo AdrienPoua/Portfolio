@@ -6,7 +6,7 @@ import MyProgress from '../../components/MyProgress';
 export default function Index() {
   return (
     <section className={styles.projects}>
-      <Subtitle content={"Mes projets personnels"}/>
+      <Subtitle anchor={"projects"} content={"Mes projets personnels"}/>
       <Project
         image='https://images.unsplash.com/photo-1604964432806-254d07c11f32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80'
         title='test'

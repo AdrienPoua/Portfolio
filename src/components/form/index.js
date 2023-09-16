@@ -9,18 +9,18 @@ export default function Form() {
    }
   return (
     <form
-      className={styles.form}
+      className="d-flex flex-column"
       action='traitement.php'
       method='POST'
     >
       <label
-        className={styles.form__label}
+        className="mb-1"
         htmlFor='email'
       >
         Email
       </label>
       <input
-        className={styles.form__input}
+        className="p-2 rounded mb-3 "
         type='email'
         id='email'
         name='email'
@@ -29,27 +29,23 @@ export default function Form() {
       />
 
       <label
-        className={styles.form__label}
+        className="mb-1"
         htmlFor='message'
       >
         Message
       </label>
       <textarea
-        className={styles.form__input}
+        className="p-2 mb-4 rounded "
         id='message'
         name='message'
         placeholder='Que souhaitez-vous dire ?'
         rows='4'
         required
       />
+    <button className='btn btn-info w-25 m-auto' onClick={handleClick} type='submit' >
+      Merci
+    </button>
 
-      <Button
-        type='submit'
-        handleClick={handleClick}
-        className='btn--form'
-        content='Cliquez-moi'
-        disabled={isButtonDisabled}
-      />
     </form>
   );
 }

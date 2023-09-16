@@ -1,9 +1,11 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
+$color : black ;
+
 .title {
   display: inline-block;
-  border-top : black 5px solid;
+  border-top : var(--color) 5px solid;
   width: fit-content;
   margin : 0 0 3em 3em;
 }
@@ -11,6 +13,6 @@
   @include pseudo($pos: absolute);
   height: 30px;
   aspect-ratio: 1.618;
-  background-color: black;
+  background-color: var(--color);
   left : calc(-20px + 3em);
 }

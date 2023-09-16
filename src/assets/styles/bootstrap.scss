@@ -1,1 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
+
+/* Styles de base pour la carte */
+.card-hover {
+    transition: transform 0.3s ease-in-out;
+    transform-style: preserve-3d;
+  }
+  
+  /* Effet de survol */
+  .card-hover:hover {
+    transform: perspective(800px) translateZ(50px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre */
+  }
+  

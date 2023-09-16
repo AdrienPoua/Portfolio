@@ -4,9 +4,10 @@ import Landing from './sections/Landing';
 import About from './sections/About'
 import Footer from './sections/Footer';
 import Projects from './sections/Projects';
-import Fun from './sections/Fun';
+import Challenges from './sections/Challenges';
 import Skills from './sections/Skills';
 export const Context = createContext();
+
 export default function App() {
   const [language, setLanguage] = useState(true);
 
@@ -17,7 +18,7 @@ export default function App() {
         <About />
         <Skills/>
         <Projects/>
-        <Fun/>
+        <Challenges/>
         <Footer/>
       </Context.Provider>
     </>

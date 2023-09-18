@@ -1,11 +1,9 @@
 import React, { useContext } from 'react';
 import styles from './styles.module.scss';
-import { Context } from '../../app';
 import Subtitle from '../../components/Subtitle';
 import { Row, Col } from 'react-bootstrap';
 
 export default function Index({ lang }) {
-  const [language, setLanguage] = useContext(Context);
   return (
     <section className="bg-black text-light p-5">
         <Subtitle anchor={"about"} content={"About"} version={"light"} />

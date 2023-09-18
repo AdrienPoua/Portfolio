@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import styles from './styles.module.scss';
 import Navbar from '../Navbar/';
 import { TbLanguageHiragana } from 'react-icons/tb';
-import { Context } from '../../app'
+import { languageContext } from '../../app'
 
 export default function Index() {
 
-  const [language, setLanguage] = useContext(Context);
+  const [language, setLanguage] = useContext(languageContext);
   const handleClick = () => setLanguage((prev) => !prev);
 
   return (

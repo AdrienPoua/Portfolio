@@ -1,14 +1,20 @@
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
-import styles from './styles.module.scss';
 import Row from 'react-bootstrap/Row';
+import React from 'react';
+import { useContext } from 'react';
+import {modalContext} from '../../app';
+
 
 export default function Index({ title, badge }) {
+  const [isOpen, setIsOpen] = useContext(modalContext);
   const js = '#f7e018';
   const css = '#2965f1';
-
+  const handleClick = () => {
+    setIsOpen(true)
+  }
   return (
-    <Card className='shadow card-hover'>
+    <Card className='shadow card-hover' onClick={handleClick}>
       <Card.Img
  
         variant='top'

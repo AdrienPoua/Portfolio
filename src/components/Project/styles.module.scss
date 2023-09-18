@@ -1,56 +1,18 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
-.project {
-  position: relative;
-  border-radius: 2rem;
-  overflow: hidden;
-  height: 500px;
-  width: 100%;
-  .content {
-    @include flex-column;
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    .year {
-      @include fonts(primary, 1.25rem, 600, primary-text);
-    }
-    .title {
-      @include fonts(primary, 2.5rem, 600, primary-text);
-    }
-    .description {
-      @include fonts(primary, 1.5rem, 400, primary-text);
-    }
-  }
+.colorBurn {
+  mix-blend-mode: color-burn;
 }
-.items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin : 1rem ;
-  .tags {
-    @include flex-center;
-    gap: 1rem;
-    .link {
-        @include flex-center;
-    }
-    .icone {
-      height: 25px;
-      aspect-ratio: 1;
-      background-color: red;
-      mix-blend-mode: color-burn;
-    }
-  }
-  .techs {
-    @include flex-center;
-    height: fit-content;
-    .item {
-      width: 50px;
-      margin-left : 0.5rem;
-      background-color: red;
-    }
-    .icone {
-      object-fit: cover;
-    }
-  }
+
+.project {
+  @include flex-column;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.height:first-child {
+  max-height: 400px;
+}
+
+.badge {
+  height : 40px;
 }

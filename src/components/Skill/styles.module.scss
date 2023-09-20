@@ -1,7 +1,7 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
-$Animation-timing: 30s;
+$Animation-timing: 100s;
 @keyframes rotateCircle {
   0% {
     rotate: 0deg;
@@ -15,14 +15,13 @@ $Animation-timing: 30s;
   @include flex-center;
   position: relative;
   aspect-ratio: 1;
-
   &::before {
     @include pseudo($pos: absolute);
     content: '';
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: dashed 2px black;
+    border: dashed 3px black;
     animation: rotateCircle $Animation-timing linear
       infinite;
   }
@@ -32,23 +31,25 @@ $Animation-timing: 30s;
   padding: 10px;
   background-color: black;
 }
-.container:nth-child(2){
-  align-self: center;
-}
 
+.container{
+  margin: auto
+}
 .item {
   @include flex-column;
   position: absolute;
   z-index: 2;
   transform-origin: center;
-
   .item__title {
     @include flex-center;
-    flex: 1;
+    width: fit-content;
+    margin: auto;
+    background-color: white;
   }
   .item__circle {
     @include flex-center;
     margin: auto;
+    background-color: white;
     aspect-ratio: 1;
     width: 100%;
     border-radius: 50%;
@@ -67,7 +68,12 @@ $Animation-timing: 30s;
   top: 25%;
   transform: translate(-50%, -50%);
 }
+
 .right {
+  right : -25%;
+}
+
+.right.onlyTwo {
   right: 0;
   top: 25%;
   transform: translate(50%, -50%);
@@ -83,3 +89,4 @@ $Animation-timing: 30s;
 .item:first-child {
   transform-origin: center;
 }
+

@@ -1,8 +1,6 @@
 import React from 'react';
-import Button from '../Button';
 import styles from './styles.module.scss';
 import { Badge } from 'react-bootstrap';
-import Ratio from 'react-bootstrap/Ratio';
 
 export default function Project({
     image,

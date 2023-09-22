@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const path = require("path");
 const projectsRoutes = require("./routes/projects");
 const challengesRoutes = require("./routes/challenges");
+const contactRoute = require("./routes/contact");
+const cors = require("cors");
 
 require("dotenv").config();
 
@@ -34,5 +36,6 @@ app.use((req, res, next) => {
 
 app.use("/api/portfolio/projects", projectsRoutes);
 app.use("/api/portfolio/challenges",challengesRoutes);
+app.use("/api/portfolio/contact", cors(), contactRoute);
 
 module.exports = app;

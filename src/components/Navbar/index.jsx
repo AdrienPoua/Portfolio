@@ -32,11 +32,11 @@ export default function index() {
         </li>
         <li className={styles.li}>
           <a
-            href='#fun'
+            href='#challenges'
             className={styles.link}
           >
             {' '}
-            Having fun
+            Challenges
           </a>
         </li>
         <li className={styles.li}>

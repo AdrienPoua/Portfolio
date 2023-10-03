@@ -3,90 +3,90 @@
 
 $Animation-timing: 100s;
 @keyframes rotateCircle {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
 }
 
 .circle {
-  @include flex-center;
-  position: relative;
-  aspect-ratio: 1;
-  &::before {
-    @include pseudo($pos: absolute);
-    content: '';
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: dashed 3px black;
-    animation: rotateCircle $Animation-timing linear
-      infinite;
-  }
+    @include flex-center;
+    position: relative;
+    aspect-ratio: 1;
+    &::before {
+        @include pseudo($pos: absolute);
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: dashed 3px black;
+        animation: rotateCircle $Animation-timing linear
+            infinite;
+    }
 }
 .dot {
-  border-radius: 50%;
-  padding: 10px;
-  background-color: black;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: black;
 }
 
-.container{
-  margin: auto
+.container {
+    margin: auto;
 }
 .item {
-  @include flex-column;
-  position: absolute;
-  z-index: 2;
-  transform-origin: center;
-  .item__title {
-    @include flex-center;
-    width: fit-content;
-    margin: auto;
-    background-color: white;
-  }
-  .item__circle {
-    @include flex-center;
-    margin: auto;
-    background-color: white;
-    aspect-ratio: 1;
-    width: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  }
-  .item__image {
-    object-fit: contain;
-  }
+    @include flex-column;
+    position: absolute;
+    z-index: 2;
+    transform-origin: center;
+    .item__title {
+        @include flex-center;
+        width: fit-content;
+        margin: auto;
+        background-color: white;
+    }
+    .item__circle {
+        @include flex-center;
+        margin: auto;
+        background-color: white;
+        aspect-ratio: 1;
+        width: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+            rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+            rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+    .item__image {
+        object-fit: contain;
+    }
 }
 
 .left {
-  left: 0;
-  top: 25%;
-  transform: translate(-50%, -50%);
+    left: 0;
+    top: 25%;
+    transform: translate(-50%, -50%);
 }
 
 .right {
-  right : -25%;
+    right: -25%;
 }
 
 .right.onlyTwo {
-  right: 0;
-  top: 25%;
-  transform: translate(50%, -50%);
+    right: 0;
+    top: 25%;
+    transform: translate(50%, -50%);
 }
 .bottom {
-  bottom: 0;
-  transform: translate(0%, 75%);
+    bottom: 0;
+    transform: translate(0%, 75%);
 }
 .bottom > *:first-child {
-  order: 1;
+    order: 1;
 }
 
 .item:first-child {
-  transform-origin: center;
+    transform-origin: center;
 }
 

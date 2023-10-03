@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+
 
 .absolute {
   position: absolute;
@@ -64,5 +68,10 @@
   }
   4% {
     transform: translate(2%, -23%);
+  }
+}
+@media (max-width: map-get($breakpoints, "desktop")) {
+  .range {
+    top : 15rem;
   }
 }

@@ -1,45 +1,49 @@
 import React from 'react';
-import styles from './styles.module.scss';
-import Header from '../../components/Header';
+import {
+    Container,
+    Row,
+    Col,
+    Button,
+} from 'react-bootstrap'; // Utilisation des composants Bootstrap React
+
+import Header from '../../components/Header'; // Assurez-vous d'importer correctement votre en-tête
+
+import styles from './styles.module.scss'; // Importation du module de styles
+import Coder from '../../components/Coder';
 
 export default function Index() {
-  return (
-    <section className={styles.landing}>
-      <Header />
-      <div className={styles.container}>
-        <div className={styles.col}>
-          <h1 className={styles.h1}>
-            Adrien <br /> Poua
-          </h1>
-          <h2 className={styles.h2}>
-            Développeur Front-end
-          </h2>
-          <p className={styles.p}>
-            Autodidacte de 23 ans, je suis passionné par le
-            développement web, l'UI/UX et l'accessibilité
-            depuis 9 ans.
-          </p>
-          <button className={styles.cta}>
-            {' '}
-            Me contacter{' '}
-          </button>
-        </div>
-        <div className={styles.col}></div>
-      </div>
-      <div className={styles.anchor}>
-        <a
-          className={styles.a}
-          href='tqt'
-        >
-          {' '}
-          Me découvrir{' '}
-        </a>
-        <div className={styles.arrow__wrapper}>
-          <button className={styles.arrow}></button>
-        </div>
-      </div>
-
-
-    </section>
-  );
+    return (
+        <section
+            className={` ${styles['section__landing']} d-flex flex-column `}>
+            <Header />
+            <Container className=' d-flex flex-grow-1'>
+                <Row className='d-flex flex-grow-1'>
+                    <Col className='col-6 d-flex flex-column justify-content-center'>
+                        <h1 className=' display-1'>
+                            Poua <br /> Adrien
+                        </h1>
+                        <h2 className=''>
+                            Développeur Front-end
+                        </h2>
+                        <p>
+                            Autodidacte de 23 ans, je suis
+                            passionné par le développement
+                            web, l'UI/UX et l'accessibilité
+                            depuis 9 ans.
+                        </p>
+                        <a href='#contact'>
+                            <Button
+                                variant='dark'
+                                className='w-50 mx-auto'>
+                                Me contacter
+                            </Button>
+                        </a>
+                    </Col>
+                    <Col className='col-6 d-flex flex-column justify-content-center'>
+                    <Coder />
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+    );
 }

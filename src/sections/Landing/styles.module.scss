@@ -1,58 +1,7 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
-.landing {
+.section__landing {
   min-height: 100vh;
-  @include flex-column;
-  justify-content: space-between;
-  .container {
-    display: flex;
-    margin-inline: 2em;
-  }
-  .col {
-    @include flex-column;
-    flex-basis: 50%;
-  }
-  .h1 {
-    @include fonts(secondary, 6rem, 900, black);
-    line-height: 5rem;
-  }
-  .h2 {
-    @include fonts(secondary, 2rem, 600);
-    letter-spacing: 1px;
-    line-height: 2em;
-  }
-  .cta {
-    align-self: center;
-    background-color: black;
-    padding: 10px;
-    margin-top: 2em;
-    width: 40%;
-    color: white;
-  }
-  .anchor {
-    @include flex-column;
-    align-self: center;
-    margin-bottom: 1em;
-  }
-  .a {
-    color : black;
-  }
-  .arrow__wrapper {
-    margin: auto;
-  }
-  .arrow {
-    padding: 10px;
-    margin-left: auto;
-    background-color: transparent;
-    border: none;
-    border-right: black solid 2px;
-    border-bottom: black solid 2px;
-    transform: rotate(45deg);
-  }
 }
-.test {
-  height : 1000px;
-  width : 1000px;
-  scroll-snap-type: none;
-}
+

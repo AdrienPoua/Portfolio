@@ -19,3 +19,14 @@
   background-color: black;
   left: calc(-20px + 3em);
 }
+
+@media (max-width: map-get($breakpoints, "desktop")) {
+  .responsive {
+    @include flex-column;
+    gap : 5rem
+  }
+  .responsive:nth-child(2){
+    flex-direction: row;
+  }
+
+}

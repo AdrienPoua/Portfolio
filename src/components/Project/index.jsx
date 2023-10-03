@@ -40,7 +40,6 @@ export default function Project({
                     alt='Apercçu du projet'
                     className='rounded-top'
                 />
-
                 <div
                     className={`d-flex flex-column position-absolute bottom-0 left-0 ps-4 pb-2 text-light`}
                 >

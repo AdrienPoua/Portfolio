@@ -11,7 +11,6 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  font-family: map-get($typography, primary );
 }
 
 html:focus-within {
@@ -60,3 +59,4 @@ button {
   background-color: transparent;
   border : none;
 }
+

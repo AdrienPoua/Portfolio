@@ -1,5 +1,14 @@
+// Importez d'abord Bootstrap Sass
 @import '~bootstrap/scss/bootstrap';
 
+// Ensuite, importez votre fichier de variables
+@import './variables.scss';
+
+// Personnalisez la variable $font-family-base en utilisant votre variable personnalisée
+
+:root {
+  --bs-body-font-family : Roboto
+}
 /* Styles de base pour la carte */
 .card-hover {
     transition: transform 0.3s ease-in-out;
@@ -11,4 +20,3 @@
     transform: perspective(800px) translateZ(50px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre */
   }
-  

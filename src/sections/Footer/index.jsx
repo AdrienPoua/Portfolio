@@ -24,7 +24,7 @@ export default function Index() {
                             content={'Contact'}
                         />
                         <Row>
-                            <Col className='col-12 col-md-6 m-auto'>
+                            <Col className='col-12 col-lg-8 m-auto'>
                                 <Clipboard
                                     isSubmit={isSubmit}
                                 />

@@ -7,14 +7,12 @@ import Projects from './sections/Projects';
 import Challenges from './sections/Challenges';
 import Skills from './sections/Skills';
 import Modale from './components/Modal';
-import { fetchData } from './functions';
 import {
     endpointChallenges,
     endpointProjects,
 } from './variables';
 import { useEffect } from 'react';
 
-export const languageContext = createContext('en');
 export const modalContext = createContext();
 
 export default function App() {
@@ -37,10 +35,9 @@ export default function App() {
                 console.log(challenge[0]['_id']);
             });
     }, []);
-    const [language, setLanguage] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <languageContext.Provider value='en'>
             <modalContext.Provider
                 value={{
                     isOpen,
@@ -57,6 +54,5 @@ export default function App() {
                 <Challenges challenges={challenges} />
                 <Footer />
             </modalContext.Provider>
-        </languageContext.Provider>
     );
 }

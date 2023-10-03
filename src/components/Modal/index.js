@@ -46,21 +46,6 @@ export default function Modale({ challenges }) {
                         {' '}
                         Retour au site{' '}
                     </Button>
-
-                    <button
-                        className='position-absolute top-50  start-0  p-5 translate-middle'
-                        data-position='left'
-                        onClick={() => setIsOpen(false)}
-                    >
-                        <div className={styles.arrow}></div>{' '}
-                    </button>
-                    <button
-                        className='position-absolute top-50 end-0 p-3 translate-middle'
-                        data-position='right'
-                        onClick={() => setIsOpen(false)}
-                    >
-                        <div className={styles.arrow}></div>{' '}
-                    </button>
                 </Modal.Body>
             </Modal>
         </>

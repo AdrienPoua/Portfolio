@@ -5,13 +5,13 @@ import Challenge from '../../components/Challenge';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { ChallengeSVG } from '../../variables/index'
+import { ChallengeSVG } from '../../variables/index';
 
 export default function Index({ challenges }) {
     return (
         <section className={styles.section}>
             <Subtitle
-                anchor={'challenge'}
+                anchor={'challenges'}
                 content={'Challenges'}
             />
             <Container>
@@ -19,18 +19,12 @@ export default function Index({ challenges }) {
                     <Col className='d-flex flex-wrap gap-5 justify-content-center '>
                         {challenges.length > 0 &&
                             challenges.map(
-                                ({
-                                    language,
-                                    tags,
-                                    _id,
-                                }) => (
+                                ({ tags, _id, img }) => (
                                     <Challenge
-                                        logo={ChallengeSVG.get(
-                                            language
-                                        )}
+                                        tags={tags}
                                         key={_id}
+                                        img={img}
                                         id={_id}
-                                        badges={tags}
                                     />
                                 )
                             )}

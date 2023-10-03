@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 
 export default function Index({width}) {
   return (
-    <div className={styles.absolute} style={{width : `${width}px`}} >
+    <div style={{width : `${width}px`}} className={`${styles.absolute} `}>
     <div
       className={`${styles.range} `}
       style={{ '--p': 20 }}

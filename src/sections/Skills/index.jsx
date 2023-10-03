@@ -15,7 +15,7 @@ export default function Index() {
                 anchor={'skills'}
             />
             <Container>
-                <Row>
+                <Row className="flex-column flex-lg-row gap-5">
                     <Col className='d-flex justify-content-center align-items-center'>
                         <Skill
                             size='300'
@@ -23,7 +23,7 @@ export default function Index() {
                             skills={skills[0]}
                         />
                     </Col>
-                    <Col className='d-flex flex-column justify-content-center gap-5'>
+                    <Col className='d-flex justify-content-center gap-5 flex-lg-column'>
                             <Skill
                                 size='150'
                                 fs='fs-4'

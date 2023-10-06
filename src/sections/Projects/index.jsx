@@ -31,6 +31,7 @@ export default function Index({ projects }) {
                                     project.technologies
                                 }
                                 github={project.github}
+                                url={project.url}
                             />
                         ))}
                 </Row>

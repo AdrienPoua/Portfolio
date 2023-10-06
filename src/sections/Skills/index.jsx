@@ -14,30 +14,25 @@ export default function Index() {
                 content={'Mes compétences'}
                 anchor={'skills'}
             />
-            <Container>
-                <Row className="flex-column flex-lg-row gap-5">
+            <Container className='mt-5'>
+                <Row className="flex-column flex-xl-row gap-7">
                     <Col className='d-flex justify-content-center align-items-center'>
                         <Skill
-                            size='300'
-                            fs='fs-4'
                             skills={skills[0]}
                         />
                     </Col>
-                    <Col className='d-flex justify-content-center gap-5 flex-lg-column'>
+                    <Col className='d-flex justify-content-center gap-6 flex-column flex-md-row align-items-center '>
                             <Skill
-                                size='150'
-                                fs='fs-4'
                                 skills={skills[1]}
-                            />
+                                size = {"small"}
+                                />
                             <Skill
-                                size='175'
-                                fs='fs-5'
                                 skills={skills[2]}
+                                size = {"small"}
                             />
                     </Col>
                     <Col className='d-flex justify-content-center align-items-center'>
                         <Skill
-                            size='200'
                             fs='fs-4'
                             skills={skills[3]}
                             progress={true}

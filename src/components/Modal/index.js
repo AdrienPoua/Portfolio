@@ -11,7 +11,6 @@ export default function Modale({ challenges }) {
         isOpen,
         setIsOpen,
         challengeActive,
-        setChallengeActive,
     } = useContext(modalContext);
 
     return (
@@ -40,7 +39,7 @@ export default function Modale({ challenges }) {
 
                     <Button
                         className='position-absolute bottom-0 start-50 translate-middle m-3 fs-1'
-                        variant='light'
+                        variant='info'
                         onClick={() => setIsOpen(false)}
                     >
                         {' '}

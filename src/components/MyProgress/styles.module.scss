@@ -12,9 +12,10 @@
   background-color: #333;
   width: 100%;
   height: 30px;
-  top : -5rem;
+  top : 15rem;
   transform: skew(30deg);
   font-family: 'Orbitron', monospace;
+  left : 0;
   
   &:before {
     --width: calc(var(--p) * 1%);
@@ -70,8 +71,5 @@
     transform: translate(2%, -23%);
   }
 }
-@media (max-width: map-get($breakpoints, "desktop")) {
-  .range {
-    top : 15rem;
-  }
-}
+
+  

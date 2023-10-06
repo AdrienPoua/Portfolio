@@ -1,6 +1,16 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
+:root {
+    --dot-size: 25px;
+    --dot-size-small: 12px;
+    --circle-size: 200px;
+    --circle-size-small: 150px;
+    --item-size: 75px;
+    --item-size-small: 50px;
+    --skill-text : "ok"
+}
+
 $Animation-timing: 100s;
 @keyframes rotateCircle {
     0% {
@@ -15,6 +25,10 @@ $Animation-timing: 100s;
     @include flex-center;
     position: relative;
     aspect-ratio: 1;
+    margin: auto;
+    width: var(
+        --circle-size
+    ); // Utilise la variable pour la taille du cercle
     &::before {
         @include pseudo($pos: absolute);
         content: '';
@@ -26,67 +40,80 @@ $Animation-timing: 100s;
             infinite;
     }
 }
-.dot {
-    border-radius: 50%;
-    padding: 10px;
-    background-color: black;
-}
 
-.container {
-    margin: auto;
+.before {
+    position: absolute;
+    width: fit-content;
 }
 .item {
-    @include flex-column;
-    position: absolute;
-    z-index: 2;
-    transform-origin: center;
-    .item__title {
-        @include flex-center;
-        width: fit-content;
-        margin: auto;
-        background-color: white;
-    }
-    .item__circle {
-        @include flex-center;
-        margin: auto;
-        background-color: white;
-        aspect-ratio: 1;
-        width: 100%;
-        border-radius: 50%;
-        overflow: hidden;
-        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-            rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-            rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    }
-    .item__image {
-        object-fit: contain;
+    overflow: hidden;
+    background-color: white;
+    width: var(--item-size);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    &__image {
+        object-fit: contain
     }
 }
+.before:not(:nth-child(4))::before {
+    position: absolute;
+    top : -50%;
+    left : 0;
+    font-size: 2rem;
+    content: var(--skill-text);
+    left : 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+}
+.before:is(:nth-child(4))::before {
+    position: absolute;
+    bottom : -25%;
+    left : 0;
+    font-size: 1rem;
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    content: var(--skill-text);
+    left : 50%;
+    transform: translate(-50%, 50%);
+}
 
-.left {
-    left: 0;
-    top: 25%;
+.before:has(.item__one) {
+    left : 0;
     transform: translate(-50%, -50%);
 }
 
-.right {
-    right: -25%;
-}
-
-.right.onlyTwo {
-    right: 0;
-    top: 25%;
+.before:has(.item__two) {
+    right : 0;
     transform: translate(50%, -50%);
 }
-.bottom {
+
+.before:has(.item__three) {
+    bottom : 0;
+    transform: translate(0, 50%);
+}
+
+.item__last {
     bottom: 0;
-    transform: translate(0%, 75%);
-}
-.bottom > *:first-child {
-    order: 1;
 }
 
-.item:first-child {
-    transform-origin: center;
+
+
+.circle.small {
+    width: var(--circle-size-small);
+    .dot {
+        padding: var(--dot-size-small);
+    }
+    .item {
+        width: var(--item-size-small);
+    }
 }
 
+.dot {
+    border-radius: 50%;
+    padding: var(--dot-size);
+    background-color: black;
+}

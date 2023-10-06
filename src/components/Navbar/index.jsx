@@ -27,7 +27,7 @@ export default function index() {
             href='#projects'
             className={styles.link}
           >
-            Mes projets
+            Projets
           </a>
         </li>
         <li className={styles.li}>

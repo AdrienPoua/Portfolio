@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 function Index() {
     return (
         <>
-            <div className={styles.frame}>
+            <div className={styles.frame} >
                 <div className={styles.center}>
                     <div className={styles.ball}></div>
                     {Array.from({ length: 8 }, (_, i) => (

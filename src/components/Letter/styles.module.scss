@@ -1,6 +1,6 @@
 
   .layers {
-    position: relative;
+    z-index: -10
   }
   
   .layers::before,
@@ -9,6 +9,10 @@
     position: absolute;
     width: 110%;
     z-index: -1;
+  }
+  .letter{
+    z-index: -5;
+
   }
   
   .layers::before {

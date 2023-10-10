@@ -21,8 +21,8 @@ export default function Clipboard() {
   onClick={handleClick}
   className={`btn btn-dark w-100 d-flex align-items-center justify-content-between p-2 }`}
   >
-{ !clicked && <span className={`fs-4 ${styles['fluid-font']}`} > adrien.poua@gmail.com </span> }
-    { clicked && <span className='text-success fs-3' > Copié dans le presse-papiers </span> }
+{ !clicked && <span className={`fs-4 ${styles.responsive}`} > adrien.poua@gmail.com </span> }
+    { clicked && <span className={`fs-4 text-success ${styles.responsive}`} > Copié dans le presse-papiers </span> }
   <span>
     { !clicked && <FaRegClipboard className='fs-3' /> }
     { clicked && <FaClipboardCheck className='text-success fs-3' /> }

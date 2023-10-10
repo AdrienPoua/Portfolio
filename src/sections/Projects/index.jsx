@@ -7,11 +7,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export default function Index({ projects }) {
-    console.log(projects);
     return (
         <section className='d-flex flex-column p-5'>
             <Subtitle
-                anchor={'projects'}
+                anchor={'projets'}
                 content={'Mes projets personnels'}
             />
             <Container className='container-sm'>
@@ -32,6 +31,7 @@ export default function Index({ projects }) {
                                 }
                                 github={project.github}
                                 url={project.url}
+                                srcset={project.srcset}
                             />
                         ))}
                 </Row>

@@ -8,7 +8,10 @@ const YourComponent = () => {
                 <h2
                     className={`${styles.hero} ${styles.glitch} ${styles.layers}`}
                     data-text=''>
-                    <span className='fs-1'>Développeur Front-end</span>
+                    <span
+                        className={`fs-1 ${styles.letter}`}>
+                        Développeur Front-end
+                    </span>
                 </h2>
             </div>
         </>

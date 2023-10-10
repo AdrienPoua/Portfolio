@@ -1,4 +1,9 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
-
+@media screen and (max-width: 576px) {
+  
+  .responsive  {
+    font-size: 1em !important;
+  }
+}

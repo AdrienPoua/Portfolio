@@ -3,7 +3,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { modalContext } from '../../app';
 import styles from './styles.module.scss';
-import { SVG } from '../../assets/utils/svg';
+import { icones } from '../../assets/utils/icones';
 
 export default function Index({ tags, id, img }) {
     const { setIsOpen, setChallengeActive } =
@@ -29,7 +29,11 @@ export default function Index({ tags, id, img }) {
                         <li
                             className='w-25 '
                             key={tag}>
-                            {SVG.get(tag)}
+                            <img
+                                src={icones.get(tag)}
+                                alt={tag}
+                                className='object-fit-contain'
+                            />
                         </li>
                     ))}
                 </ul>

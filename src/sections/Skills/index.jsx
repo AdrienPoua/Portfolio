@@ -12,7 +12,7 @@ export default function Index() {
         <section className={styles.skills}>
             <Subtitle
                 content={'Mes compétences'}
-                anchor={'skills'}
+                anchor={'competences'}
             />
             <Container className='mt-5'>
                 <Row className="flex-column flex-xl-row gap-7">

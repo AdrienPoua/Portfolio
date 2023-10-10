@@ -5,11 +5,15 @@
   mix-blend-mode: color-burn;
 }
 
+.image {
+  filter: brightness(0.8)
+}
+
 .project {
   @include flex-column;
 }
-.height:first-child {
-  max-height: 400px;
+.height {
+  height: 400px;
 }
 
 .badge {
@@ -17,4 +21,27 @@
 }
 .link {
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .badge {
+    height : 30px;
+    font-size: 1.2em !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .project {
+    padding-right: 1rem !important;
+  }
+  .height {
+    height: 500px;
+  }
+  .techs {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translate(50%, 0%);
+    right : -1rem;
+    top : 0;
+  }
 }

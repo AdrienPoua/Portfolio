@@ -12,6 +12,7 @@ import styles from './styles.module.scss'; // Importation du module de styles
 import Coder from '../../components/Coder';
 import Letter from '../../components/Letter'
 
+
 export default function Index() {
     return (
         <section

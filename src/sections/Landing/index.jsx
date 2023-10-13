@@ -9,7 +9,7 @@ import {
 import Header from '../../components/Header'; // Assurez-vous d'importer correctement votre en-tête
 
 import styles from './styles.module.scss'; // Importation du module de styles
-import Coder from '../../components/Coder';
+import Hole from '../../components/Hole';
 import Letter from '../../components/Letter'
 
 
@@ -44,7 +44,7 @@ export default function Index() {
                         </a>
                     </Col>
                     <Col className='d-none d-lg-flex flex-column justify-content-center'>
-                        <Coder />
+                        <Hole />
                     </Col>
                 </Row>
             </Container>

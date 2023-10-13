@@ -14,7 +14,6 @@ export default function Project({
     url,
     srcset: imageMobile,
 }) {
-
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
     });
@@ -48,20 +47,27 @@ export default function Project({
                 target='_blank'
                 rel='noreferrer'>
                 <img
-                    src={image}
                     alt='Aperçu du projet'
                     src={projectImage}
                     className={`rounded-top project-hover object-fit-fill object-fit-md-cover ${styles.image}`}
                 />
                 <div
                     className={`d-flex flex-column position-absolute bottom-0 left-0 ps-4 pb-2 text-light`}>
-                    <div className='fw-500 fw-bold fs-4 '>
-                        {year}
+                    <div className='fw-500  mb-1  fw-bold fs-4'>
+                        <div className='fit-content bg-secondary px-1 bg-opacity-75 '>
+                            {year}
+                        </div>
                     </div>
-                    <h2 className='fw-bold text-capitalize fs-1 lh-1'>
-                        {title}
-                    </h2>
-                    <p className='fs-3'>{description}</p>
+                    <div className=''>
+                        <h2 className='fw-bold lh-1 px-1 fit-content bg-secondary bg-opacity-75 text-capitalize fs-1 lh-1'>
+                            {title}
+                        </h2>
+                    </div>
+                    <div className=''>
+                        <p className='fs-3 lh-1 px-1 fit-content bg-secondary bg-opacity-75 '>
+                            {description}
+                        </p>
+                    </div>
                 </div>
             </a>
             <div

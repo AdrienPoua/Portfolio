@@ -1,8 +1,8 @@
 export const email = 'adrien.poua@gmail.com';
 export const endpointProjects =
-    'http://localhost:80/api/portfolio/projects/';
+    'http://15.188.56.146:80/api/portfolio/projects';
 export const endpointChallenges =
-    'http://localhost:80/api/portfolio/challenges/';
+    'http://15.188.56.146:80/api/portfolio/challenges';
 
 export const skills = [
     [

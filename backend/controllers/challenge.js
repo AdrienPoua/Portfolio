@@ -21,31 +21,7 @@ exports.createChallenge = async (req, res) => {
   }
 };
 
-// Obtenir un projet par son ID
-exports.getChallengeById = async (req, res) => {
-  try {
-    const challenge = await Challenge.findById(req.params.id);
-    if (!challenge) {
-      return res.status(404).json({ error: 'Projet introuvable' });
-    }
-    res.json(challenge);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
 
-// Mettre à jour un projet par son ID
-exports.updateChallenge = async (req, res) => {
-  try {
-    const challenge = await Challenge.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    if (!challenge) {
-      return res.status(404).json({ error: 'Projet introuvable' });
-    }
-    res.json(challenge);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
 
 // Supprimer un projet par son ID
 exports.deleteChallenge = async (req, res) => {

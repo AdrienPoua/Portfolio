@@ -6,22 +6,20 @@ exports.sendMessage = async (req, res) => {
     const formData = req.body;
 
     // Créez un objet de transporteur pour l'envoi d'e-mails (configurez les informations de votre serveur de messagerie)
-// Créez un objet de transporteur pour l'envoi d'e-mails (configurez les informations de votre serveur de messagerie)
-const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com', // Serveur SMTP de Gmail
-    port: 465, // Port SMTP sécurisé de Gmail
-    secure: true, // Utilisez SSL/TLS pour une connexion sécurisée
-    auth: {
-      user: "adrien.poua@gmail.com",
-      pass: "znnh arwd bexw mmxa"// Votre mot de passe Gmail ou le mot de passe d'application généré (si vous utilisez l'authentification à deux facteurs)
-    },
-  });
-  
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com', // Serveur SMTP de Gmail
+        port: 465, // Port SMTP sécurisé de Gmail
+        secure: true, // Utilisez SSL/TLS pour une connexion sécurisée
+        auth: {
+            user: CONTACT_EMAIL, // Utilisez la variable d'environnement CONTACT_EMAIL
+            pass: CONTACT_PASSWORD, // Utilisez la variable d'environnement CONTACT_PASSWORD
+        },
+    });
 
     // Options de l'e-mail
     const mailOptions = {
-        from: 'adrien.poua@gmail.com',
-        to: 'adrien.poua@gmail.com', // Adresse e-mail du destinataire
+        from: CONTACT_EMAIL, // Utilisez la variable d'environnement CONTACT_EMAIL comme adresse d'expéditeur
+        to: CONTACT_EMAIL, // Adresse e-mail du destinataire (peut également être une variable d'environnement si nécessaire)
         subject: 'Formulaire de contact Portfolio, de ' + formData.email,
         text: `Email: ${formData.email}\nMessage: ${formData.message}`,
     };

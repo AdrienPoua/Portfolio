@@ -38,10 +38,15 @@ export default function Index({ reverse, speed }) {
                 ref={scrollerInnerRef}
                 className={`${styles['tag-list']} ${styles.scroller__inner}`}>
                 <li>Openclassroom</li>
-                <li>Basket-ball   ❤</li>
+                <li>Basket-ball ❤</li>
+                <li>28 ans</li>
                 <li>React</li>
                 <li>Paris</li>
-                <li>Paris</li>
+                <li>Jeux video ❤</li>
+                <li>Sport</li>
+                <li>Arbitre</li>
+                <li>Japon</li>
+                <li>Passioné</li>
             </ul>
         </div>
     );

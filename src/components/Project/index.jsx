@@ -37,7 +37,7 @@ export default function Project({
         setProjectImage(
             windowSize.width > 576 ? image : imageMobile
         );
-    }, [windowSize]);
+    }, [windowSize, image, imageMobile]);
     return (
         <div
             className={`${styles.project} mb-5 p-0 position-relative`}>
@@ -53,18 +53,21 @@ export default function Project({
                 />
                 <div
                     className={`d-flex flex-column position-absolute bottom-0 left-0 ps-4 pb-2 text-light`}>
-                    <div className='fw-500  mb-1  fw-bold fs-4'>
-                        <div className='fit-content bg-secondary px-1 bg-opacity-75 '>
+                    <div className='fw-500 mb-1 fw-bold fs-4'>
+                        <div
+                            className={`fit-content ${styles.background} px-1 bg-opacity-75`}>
                             {year}
                         </div>
                     </div>
-                    <div className=''>
-                        <h2 className='fw-bold lh-1 px-1 fit-content bg-secondary bg-opacity-75 text-capitalize fs-1 lh-1'>
+                    <div className='fit-content'>
+                        <h2
+                            className={`fw-bold lh-1 px-1 ${styles.background} bg-opacity-75 text-capitalize fs-1 lh-1`}>
                             {title}
                         </h2>
                     </div>
-                    <div className=''>
-                        <p className='fs-3 lh-1 px-1 fit-content bg-secondary bg-opacity-75 '>
+                    <div className='fit-content'>
+                        <p
+                            className={`fs-3 lh-1 px-1 fit-content ${styles.background} bg-opacity-75`}>
                             {description}
                         </p>
                     </div>

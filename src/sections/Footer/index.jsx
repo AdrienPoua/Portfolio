@@ -4,6 +4,8 @@ import Clipboard from '../../components/Clipboard';
 import Subtitle from '../../components/Subtitle';
 import { Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
+import { icones } from '../../assets/utils/icones';
+import styles from './styles.module.scss';
 
 export default function Index() {
     const [isSubmit, setIsSubmit] = useState(false);
@@ -32,11 +34,42 @@ export default function Index() {
                                     Ou, si vous préférez un
                                     formulaire
                                 </p>
-                                <Form isSubmit={isSubmit} setIsSubmit={setIsSubmit} />
+                                <Form
+                                    isSubmit={isSubmit}
+                                    setIsSubmit={
+                                        setIsSubmit
+                                    }
+                                />
                             </Col>
                         </Row>
                     </div>
                 )}
+                <div className='py-5'>
+                    {
+                        <div className='d-flex flex-wrap justify-content-center align-items-center gap-5'>
+                            <img
+                                className={styles.icones}
+                                src={icones.get('React')}
+                                alt='React'
+                            />
+                            <img
+                                className={styles.icones}
+                                src={icones.get('Node')}
+                                alt='NodeJS'
+                            />
+                            <img
+                                className={styles.icones}
+                                src={icones.get('AWS')}
+                                alt='MongoDB'
+                            />
+                            <img
+                                className={styles.icones}
+                                src={icones.get('Express-light')}
+                                alt='ExpressJS'
+                            />
+                        </div>
+                    }
+                </div>
             </footer>
         </>
     );

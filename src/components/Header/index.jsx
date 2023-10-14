@@ -28,7 +28,6 @@ export default function Index() {
     }, [windowSize]);
 
     const toggleLinks = () => setShowLinks(!showLinks);
-    const displayClass = showLinks ? 'bg-light' : '';
 
     const menuItems = [
         'About',

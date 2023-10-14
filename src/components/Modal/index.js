@@ -1,10 +1,7 @@
-import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { modalContext } from '../../app';
 import { useContext } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
-import styles from './styles.module.scss';
 
 export default function Modale({ challenges }) {
     const {

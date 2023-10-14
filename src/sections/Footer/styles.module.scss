@@ -1,3 +1,8 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
+.icones {
+    width: 75px;
+    aspect-ratio: 1;
+    object-fit: contain;
+}

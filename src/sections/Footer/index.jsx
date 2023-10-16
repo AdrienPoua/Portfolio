@@ -47,6 +47,7 @@ export default function Index() {
                 <div className='py-5'>
                     {
                         <div className='d-flex flex-wrap justify-content-center align-items-center gap-5'>
+                            <p className='pt-3 '>Site construit avec</p>
                             <img
                                 className={styles.icones}
                                 src={icones.get('React')}
@@ -64,7 +65,9 @@ export default function Index() {
                             />
                             <img
                                 className={styles.icones}
-                                src={icones.get('Express-light')}
+                                src={icones.get(
+                                    'Express-light'
+                                )}
                                 alt='ExpressJS'
                             />
                         </div>

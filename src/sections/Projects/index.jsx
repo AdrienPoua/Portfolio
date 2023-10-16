@@ -1,10 +1,8 @@
 import React from 'react';
-import styles from './styles.module.scss';
 import Project from '../../components/Project';
 import Subtitle from '../../components/Subtitle';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 export default function Index({ projects }) {
     return (

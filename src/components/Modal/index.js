@@ -4,11 +4,8 @@ import { modalContext } from '../../app';
 import { useContext } from 'react';
 
 export default function Modale({ challenges }) {
-    const {
-        isOpen,
-        setIsOpen,
-        challengeActive,
-    } = useContext(modalContext);
+    const { isOpen, setIsOpen, challengeActive } =
+        useContext(modalContext);
 
     return (
         <>
@@ -16,12 +13,10 @@ export default function Modale({ challenges }) {
                 className=''
                 show={isOpen}
                 fullscreen={true}
-                onHide={() => setIsOpen(false)}
-            >
+                onHide={() => setIsOpen(false)}>
                 <Modal.Body
                     className='p-0'
-                    closeButton
-                >
+                    closeButton>
                     <iframe
                         className='w-100 h-100 position-relative'
                         src={
@@ -31,14 +26,12 @@ export default function Modale({ challenges }) {
                                     challengeActive
                             )?.url
                         }
-                        title='Challenge'
-                    ></iframe>
+                        title='Challenge'></iframe>
 
                     <Button
                         className='position-absolute bottom-0 start-50 translate-middle m-3 fs-1'
                         variant='info'
-                        onClick={() => setIsOpen(false)}
-                    >
+                        onClick={() => setIsOpen(false)}>
                         {' '}
                         Retour au site{' '}
                     </Button>

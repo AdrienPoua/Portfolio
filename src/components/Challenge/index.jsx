@@ -3,7 +3,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { modalContext } from '../../app';
 import styles from './styles.module.scss';
-import { icones } from '../../assets/utils/icones';
+import { icones } from '../../variables/icones';
 
 export default function Index({ tags, id, img }) {
     const { setIsOpen, setChallengeActive } =

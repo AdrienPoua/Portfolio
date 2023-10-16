@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.scss';
 import { Badge } from 'react-bootstrap';
-import { icones } from '../../assets/utils/icones';
+import { icones } from '../../variables/icones';
 
 export default function Project({
     image,

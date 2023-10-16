@@ -4,7 +4,7 @@ import Clipboard from '../../components/Clipboard';
 import Subtitle from '../../components/Subtitle';
 import { Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
-import { icones } from '../../assets/utils/icones';
+import { icones } from '../../variables/icones';
 import styles from './styles.module.scss';
 
 export default function Index() {

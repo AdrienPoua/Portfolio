@@ -1,8 +1,8 @@
 export const email = 'adrien.poua@gmail.com';
 export const endpointProjects =
-    'https://www.codebyadrien.fr/api/portfolio/projects';
+    'https://portfolio-git-master-adriens-projects-537f39d4.vercel.app/api/portfolio/projects';
 export const endpointChallenges =
-    'https://www.codebyadrien.fr/api/portfolio/challenges';
+    'https://portfolio-git-master-adriens-projects-537f39d4.vercel.app/api/portfolio/challenges';
 
 export const skills = [
     [

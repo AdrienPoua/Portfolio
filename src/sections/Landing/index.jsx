@@ -22,7 +22,7 @@ export default function Index() {
                 <Row className='d-flex flex-grow-1'>
                     <Col className='col-12 col-lg-6 d-flex flex-column justify-content-center'>
                         <h1 className=' display-1'>
-                            Poua <br /> Adrien
+                         
                         </h1>
                         <h2 className='fs-1 my-4'>
                             <Letter />

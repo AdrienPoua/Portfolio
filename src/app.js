@@ -35,6 +35,12 @@ export default function App() {
                 console.log(challenge[0]['_id']);
             });
     }, []);
+    setTimeout(() => {
+        console.log(challenges)
+        console.log(projects);
+    }, 1000);
+    
+    
     const [isOpen, setIsOpen] = useState(false);
 
     return (

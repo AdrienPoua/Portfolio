@@ -1,6 +1,7 @@
-const http = require('http');
+const https = require('https');
 const app = require("./app");
 const fs = require('fs');
+const { SSL_KEY , SSL_CERTIFICATE } = process.env
 
 const normalizePort = (val) => {
   const port = parseInt(val, 10);
@@ -13,7 +14,7 @@ const normalizePort = (val) => {
   }
   return false;
 };
-const port = normalizePort(process.env.PORT || "3000");
+const port = normalizePort(process.env.PORT || "443");
 app.set("port", port);
 
 const errorHandler = (error) => {
@@ -38,13 +39,12 @@ const errorHandler = (error) => {
 };
 
 ///////////////////
-// const privateKey = fs.readFileSync('C:/Users/Administrator/Desktop/SSL/Portfolio/privateKey.pem', 'utf8');
-// const certificate = fs.readFileSync('C:/Users/Administrator/Desktop/SSL/Portfolio/certificate.pem', 'utf8');
-// const credentials = { key: privateKey, cert: certificate };
-// const server = https.createServer(credentials, app);
+const privateKey = fs.readFileSync(SSL_KEY, 'utf8');
+const certificate = fs.readFileSync(SSL_CERTIFICATE, 'utf8');
+const credentials = { key: privateKey, cert: certificate };
+const server = https.createServer(credentials, app);
 //////////////////
 
-const server = http.createServer(app);
 server.on("error", errorHandler);
 server.on("listening", () => {
   const address = server.address();

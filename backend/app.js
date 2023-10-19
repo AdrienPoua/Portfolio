@@ -4,6 +4,7 @@ const path = require('path');
 const projectsRoutes = require('./routes/projects');
 const challengesRoutes = require('./routes/challenges');
 const contactRoute = require('./routes/contact');
+const appRoute = require('./routes/app')
 const cors = require('cors');
 
 require('dotenv').config();
@@ -30,5 +31,10 @@ app.use(cors());
 app.use('/api/portfolio/projects', projectsRoutes);
 app.use('/api/portfolio/challenges', challengesRoutes);
 app.use('/api/portfolio/contact', contactRoute);
+app.use('*', express.static(path.join(__dirname, '../build')));
+app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build', 'index.html'));
+});
+
 
 module.exports = app;

@@ -53,3 +53,27 @@
   .fit-content {
     width: fit-content;
   }
+
+  /* CSS pour le bouton ScrollToTop */
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  background-color: black; /* Couleur de fond du bouton (couleur primaire de Bootstrap) */
+  color: #fff; /* Couleur du texte */
+  border: none;
+  border-radius: 50%; /* Pour obtenir un bouton rond */
+  width: 60px; /* Largeur du bouton */
+  height: 60px; /* Hauteur du bouton */
+  font-size: 32px; /* Taille de la police */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+  transform: scale(1.1); /* Légèrement agrandi au survol */
+}

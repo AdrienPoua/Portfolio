@@ -29,7 +29,6 @@ export default function Index({ projects }) {
                                 }
                                 github={project.github}
                                 url={project.url}
-                                srcset={project.srcset}
                             />
                         ))}
                 </Row>

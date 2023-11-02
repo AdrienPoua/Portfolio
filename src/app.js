@@ -12,6 +12,7 @@ import {
     endpointProjects,
 } from './variables';
 import { useEffect } from 'react';
+import ScrollToTopButton from './components/ScrollToTop';
 
 export const modalContext = createContext();
 
@@ -53,6 +54,7 @@ export default function App() {
                 <Projects projects={projects} />
                 <Challenges challenges={challenges} />
                 <Footer />
+                <ScrollToTopButton/>
             </modalContext.Provider>
     );
 }

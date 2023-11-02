@@ -1,6 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const path = require('path');
 const projectsRoutes = require('./routes/projects');
 const challengesRoutes = require('./routes/challenges');
 const contactRoute = require('./routes/contact');
@@ -26,10 +25,9 @@ const app = express();
 app.use(express.json());
 
 app.use(cors());
-
-app.use('/api/portfolio/projects', projectsRoutes);
-app.use('/api/portfolio/challenges', challengesRoutes);
-app.use('/api/portfolio/contact', contactRoute);
+app.use('/portfolio/projects', projectsRoutes);
+app.use('/portfolio/challenges', challengesRoutes);
+app.use('/portfolio/contact', contactRoute);
 
 
 module.exports = app;

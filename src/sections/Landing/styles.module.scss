@@ -1,7 +1,8 @@
-@import '../../assets/styles/mixins';
-@import '../../assets/styles/variables';
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
 
 .section__landing {
   min-height: 100vh;
+  overflow: hidden;
+  max-width: 100vw;
 }
-

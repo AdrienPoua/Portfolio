@@ -1,12 +1,12 @@
-@import '../../assets/styles/mixins';
-@import '../../assets/styles/variables';
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
 
 .colorBurn {
   mix-blend-mode: color-burn;
 }
 
 .image {
-  filter: brightness(0.8)
+  filter: brightness(0.8);
 }
 
 .project {
@@ -16,20 +16,39 @@
   height: 600px;
 }
 
-.badge {
-  height : 60px;
+.link--wrapper {
+  height: 100%;
 }
 .link {
+  display: flex;
   text-decoration: none;
+  height: 100%;
+  align-items: center;
+}
+.badge--wrapper {
+  max-width: 100px;
+  margin-left: 2rem;
 }
 
 @media screen and (max-width: 768px) {
   .badge {
-    height : 40px;
+    height: 40px;
     font-size: 1.2em !important;
+    object-fit: contain;
   }
   .height {
     height: 500px;
+  }
+  .badge--wrapper {
+    max-width: 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .badge {
+    font-size: 1.2em !important;
+  }
+  .badge--wrapper {
+    max-width: 50px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -44,12 +63,10 @@
     flex-direction: column;
     position: absolute;
     transform: translate(50%, 0%);
-    right : -1rem;
-    top : 0;
+    right: 0;
+    top: 0;
   }
-
 }
-
 
 .background {
   text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;

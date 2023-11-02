@@ -49,7 +49,7 @@ export default function Index() {
     <>
       <header
         ref={headerRef}
-        className={`d-flex flex-column flex-md-row h-100 ${styles.header} ${
+        className={`flex-column flex-md-row h-100 ${styles.header} ${
           showLinks ? styles["header--active"] : ""
         }`}
       >

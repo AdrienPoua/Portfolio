@@ -4,9 +4,17 @@
 .header {
   position: absolute;
   top: 0;
-  right: 0; 
+  display: none;
+  right: -100%; /* Initialisez l'en-tête en dehors de la fenêtre */
   background-color: #e9ecef;
+  transition: transform 0.3s ease-in-out; /* Ajoutez la transition pour 'right' */
 }
+
+.header--active {
+  display: flex;
+  right: 0; /* Déplacez l'en-tête vers la gauche pour le faire apparaître */
+}
+
 .hamburger {
   position: absolute;
   top: 0;
@@ -22,14 +30,6 @@
   transform: rotate(180deg);
 }
 
-.header {
-  transform: translateX(100%);
-  transition: transform 0.2s ease-in-out;
-}
-.header--active {
-  transform: translateX(0);
-}
-
 .links {
   display: flex;
   gap: 2em;
@@ -39,7 +39,7 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    position : relative ;
+    position: relative;
   }
   .navbar {
     position: relative;

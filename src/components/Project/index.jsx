@@ -22,24 +22,22 @@ export default function Project({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
   useEffect(() => {
     setProjectImage(() => {
-      if (image.large && image.big && image.medium && image.small) {
-        return windowSize > 1400
-          ? image[1900]
-          : windowSize > 1100
-          ? image[1400]
-          : windowSize > 768
-          ? image[1100]
-          : windowSize > 576
-          ? image[768]
-          : image[400]
-      }
-      return image; // Fournir une image par défaut en cas de problème avec l'objet image
+      console.log(image);
+      return windowSize > 1400
+        ? image["1900"]
+        : windowSize > 1100
+        ? image["1400"]
+        : windowSize > 768
+        ? image["1100"]
+        : windowSize > 576
+        ? image["768"]
+        : image["480"];
     });
   }, [windowSize, image]);
 
+  console.log(projectImage);
   return (
     <div className={`${styles.project} mb-5 p-0 position-relative`}>
       <a
@@ -82,17 +80,17 @@ export default function Project({
       <div className={` d-flex justify-content-between p-1 `}>
         <ul className='d-flex gap-2 gap-md-4  justify-content-center align-items-center ps-2 h-100 flex-wrap'>
           {github && (
-            <li className=''>
+            <li className={`${styles["link--wrapper"]}`}>
               <a
                 href={github}
                 target='_blank'
                 rel='noreferrer'
-                className={styles.link}
+                className={`align-items-center ${styles.link}`}
               >
                 <Badge
                   bg='black'
                   text='light'
-                  className={`d-flex align-items-center hover-translate gap-2 fs-5 px-2 px-md-5 ${styles.badge}`}
+                  className={`d-flex align-items-center hover-translate gap-2 fs-5 px-2 px-md-5 h-75 ${styles.badge}`}
                 >
                   <svg
                     stroke='currentColor'
@@ -113,11 +111,11 @@ export default function Project({
             </li>
           )}
           {tags.map((tag, index) => (
-            <li className='p-0' key={index}>
+            <li className='p-0 h-75' key={index}>
               <Badge
                 bg='secondary'
                 text='light'
-                className={`d-flex align-items-center gap-2 fs-5 px-3 ${styles.badge}`}
+                className={`d-flex align-items-center gap-2 fs-5 px-3 h-100 ${styles.badge}`}
               >
                 {tag}
               </Badge>
@@ -128,7 +126,7 @@ export default function Project({
           className={`flex-wrap d-flex p-0 gap-2  align-items-center justify-content-md-center h-100 ${styles.techs}`}
         >
           {technologies.map((tech, index) => (
-            <li key={index}>
+            <li className={`${styles["badge--wrapper"]}`} key={index}>
               <img
                 src={icones.get(tech)}
                 alt={tech}
